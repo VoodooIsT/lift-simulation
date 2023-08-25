@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000814;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.form {
+    color: white;
+    width: 400px;
+    background-color: #2C333F;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px 16px;
+    border:1px solid white;
+    border-radius: 5px;
+    background-color: #242429;
+    color: white;
+}
+
+.form > button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #FFD60A;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    font-weight: 500;
+    /* hover: scale-95 transition-all duration-200 */
+}
+.form> button:hover {
+    scale: 95%;
+    transition: all;
+    animation-duration: 200ms;
+}
+
+/*main page*/
+
+.final_page{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+.back_btn{
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color:  	#FFD60A;
+    border: 0;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    font-weight:500;
+    font-size: medium;
+}
+.building{
+    border: 1px solid white;
+    width: 70%;
+    margin: 3% 5% 5% 25%;
+    height: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.building > :first-child {
+    border: none !important;
+}
+.floor{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px;
+    border-top: 1px solid white;
+    position: relative;
+    gap: 10px;
+}
+.back_btn:hover{
+    scale: 95%;
+    transition: all;
+    animation-duration: 200ms;
+}
+
+.floor-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    border:none;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: medium;
+}
+.up_btn {
+    background-color: #FFD60A;
+    margin-bottom: 6px;
+
+}
+.down_btn{
+    background-color: #2C333F;
+    margin-top: 6px;
+    color:white
+}

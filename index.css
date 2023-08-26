@@ -6,8 +6,8 @@
 
 body{
     background-color: #000814;
-    height: 100vh;
-    width: 100vw;
+    height: 99vh;
+    width: 98vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,8 +63,8 @@ body{
 /*main page*/
 
 .final_page{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     color: white;
 }
 .back_btn{
@@ -79,7 +79,7 @@ body{
     font-size: medium;
 }
 .building{
-    border: 1px solid white;
+    border-bottom: 1px solid white;
     width: 70%;
     margin: 3% 5% 5% 25%;
     height: 90%;
@@ -100,6 +100,52 @@ body{
     position: relative;
     gap: 10px;
 }
+.btn {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    left: 0;
+}
+
+.floorLabel {
+    position: absolute;
+    right: 30px;
+}
+
+.lift{
+    height: 100%;
+    position: relative;
+    background-color: #44E4BF;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+    position: absolute;
+    transition: transform 2.5s ease-in-out;
+    border: 0;
+}
+
+.left {
+    transform-origin: right;
+}
+
+.right {
+    right: 0;
+    transform-origin: left;
+}
+
+.door.open {
+    transform: scaleX(0);
+}
+
+
 .back_btn:hover{
     scale: 95%;
     transition: all;
@@ -107,23 +153,16 @@ body{
 }
 
 .floor-btn {
-    display: flex;
-    flex-direction: column;
     padding: 8px 16px;
     border:none;
-    margin: auto;
     cursor: pointer;
     border-radius: 5px;
-    font-weight: 600;
     font-size: medium;
 }
 .up_btn {
     background-color: #FFD60A;
-    margin-bottom: 6px;
-
 }
 .down_btn{
     background-color: #2C333F;
-    margin-top: 6px;
     color:white
 }

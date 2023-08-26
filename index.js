@@ -28,10 +28,10 @@ function formSubmitHandler(event){
 
 
 function generateBuilding(liftCount, floorCount) {
-    for(let i = 0; i < floorCount; i++){
+    for(let i = floorCount; i >= 0; i--){
         const floorElement = document.createElement('div');
         floorElement.classList.add('floor');
-        floorElement.setAttribute('floor',floor);
+        floorElement.setAttribute('floor',i);
 
         let btn = document.createElement('div');
         btn.classList.add('btn');
@@ -44,22 +44,22 @@ function generateBuilding(liftCount, floorCount) {
         up_btn.classList.add('floor-btn','up_btn');
         down_btn.classList.add('floor-btn', 'down_btn');
 
-        up_btn.setAttribute('floor', floor);
-        down_btn.setAttribute('floor', floor);
+        up_btn.setAttribute('floor', i);
+        down_btn.setAttribute('floor', i);
 
         up_btn.onclick = (event) => addRequestToQueue(event);
         down_btn.onclick = (event) => addRequestToQueue(event);
 
-        if (floor !== floorCount) btn.appendChild(up_btn);
-        if (floor !== 0) btn.appendChild(down_btn);
+        if (i !== floorCount) btn.appendChild(up_btn);
+        if (i !== 0) btn.appendChild(down_btn);
 
         let floorLabel = document.createElement('h5');
         floorLabel.classList.add('floorLabel');
-        floorLabel.textContent = `Floor ${floor}`;
+        floorLabel.textContent = `Floor ${i}`;
 
         floorElement.appendChild(btn);
 
-        if (floor === 0) {
+        if (i === 0) {
             for (let lift = 1; lift <= liftCount; lift++) {
                 let liftElement = document.createElement('div');
                 liftElement.innerHTML = `
@@ -82,8 +82,11 @@ function defaultLiftData(){
     for(let i = 0; i<allLifts.length; i++){
         liftsData.push({
             liftElement: allLifts[i],
-            floor: 0,
+            i: 0,
             isMoving: false
         })
     }
 }
+
+
+/********************************************* */
